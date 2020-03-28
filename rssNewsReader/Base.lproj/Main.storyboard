@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rssNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_news2" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Ll-6qT" customClass="RoundImgaeView" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="132" y="378" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D8V-Ll-6qT" secondAttribute="height" multiplier="1:1" id="0ry-IW-obU"/>
+                                    <constraint firstAttribute="width" constant="150" id="psr-w7-NhD"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="round">
+                                        <real key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_internet" translatesAutoresizingMaskIntoConstraints="NO" id="gER-CS-eno" customClass="RoundImgaeView" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="312" y="478" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="round">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_rss" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-26-KlH" customClass="RoundImgaeView" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="52" y="478" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="round">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth1">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MAL-at-E8t">
+                                <rect key="frame" x="112.5" y="588" width="189.5" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최신 뉴스를 제공합니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHw-rb-xr7">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="19"/>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뉴스의 키워드를 알아보세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7R-UW-WnD">
+                                        <rect key="frame" x="0.0" y="29" width="189.5" height="19"/>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뉴스를 클릭하면 원본 뉴스를 볼 수 있습니다." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t8-xH-dun">
+                                        <rect key="frame" x="0.0" y="58" width="189.5" height="38"/>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkG-Lw-P6Q">
+                                <rect key="frame" x="189.5" y="821.5" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D8V-Ll-6qT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Bt-U7-J37"/>
+                            <constraint firstItem="SvJ-26-KlH" firstAttribute="bottom" secondItem="D8V-Ll-6qT" secondAttribute="bottom" id="0lz-2V-Whf"/>
+                            <constraint firstItem="gER-CS-eno" firstAttribute="width" secondItem="D8V-Ll-6qT" secondAttribute="width" multiplier="1/3" id="56o-rA-K9E"/>
+                            <constraint firstItem="D8V-Ll-6qT" firstAttribute="leading" secondItem="SvJ-26-KlH" secondAttribute="trailing" constant="30" id="9ym-wX-aMA"/>
+                            <constraint firstItem="D8V-Ll-6qT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BiE-G1-2am"/>
+                            <constraint firstItem="gER-CS-eno" firstAttribute="leading" secondItem="D8V-Ll-6qT" secondAttribute="trailing" constant="30" id="HD9-hW-dEw"/>
+                            <constraint firstItem="SvJ-26-KlH" firstAttribute="width" secondItem="D8V-Ll-6qT" secondAttribute="width" multiplier="1/3" id="O6c-OH-mIn"/>
+                            <constraint firstItem="MAL-at-E8t" firstAttribute="top" secondItem="D8V-Ll-6qT" secondAttribute="bottom" constant="60" id="W7j-We-kN3"/>
+                            <constraint firstItem="SvJ-26-KlH" firstAttribute="height" secondItem="D8V-Ll-6qT" secondAttribute="height" multiplier="1/3" id="WLK-NQ-Cfz"/>
+                            <constraint firstItem="gER-CS-eno" firstAttribute="height" secondItem="D8V-Ll-6qT" secondAttribute="height" multiplier="1/3" id="WWv-Ci-EQe"/>
+                            <constraint firstItem="kkG-Lw-P6Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZAK-YM-8jU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kkG-Lw-P6Q" secondAttribute="bottom" constant="20" id="eCT-T4-mo7"/>
+                            <constraint firstItem="gER-CS-eno" firstAttribute="bottom" secondItem="D8V-Ll-6qT" secondAttribute="bottom" id="tNd-iW-oOl"/>
+                            <constraint firstItem="MAL-at-E8t" firstAttribute="centerX" secondItem="D8V-Ll-6qT" secondAttribute="centerX" id="tvh-sf-DAZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="UCy-ec-LTD" kind="presentation" identifier="toNaviView" modalPresentationStyle="fullScreen" id="qgs-Xn-YOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="138"/>
+        </scene>
+        <!--뉴스 리스트-->
+        <scene sceneID="Bd3-XD-3SK">
+            <objects>
+                <viewController id="hzN-XX-BZa" customClass="tableViewController" customModule="rssNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKA-le-FmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="wFE-dk-mtg">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bxD-yo-RgD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="120" id="PYF-gX-yEV" customClass="tableCell" customModule="rssNewsReader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PYF-gX-yEV" id="g6b-lu-Mh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_news2" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-hb-3Di">
+                                                    <rect key="frame" x="10" y="14" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="jHH-hb-3Di" secondAttribute="height" multiplier="1:1" id="YqO-hJ-hOj"/>
+                                                        <constraint firstAttribute="width" constant="80" id="eSj-Ag-aPy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titlefadsfdasfdakhfjkdshfkjahfjkadhskfhjkfdhkjdsafhkjadfshaf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5j-MI-B3W">
+                                                    <rect key="frame" x="100" y="14" width="294" height="16.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Titlefsdlfjkdslkjfldaks jflkadjfkldasj flkdaj flkaj dslfjj adslkfjasdlsdfjfladjfladsjklfkajdlkfjadklfas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjD-ZD-bJR">
+                                                    <rect key="frame" x="100" y="38.5" width="294" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㄴㅇㄹㅇㄴㄹㅇㄴㅇㄴㅇㄴㄹㄴㅇㄹㄴ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ni-tr-ghN" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                                    <rect key="frame" x="100" y="87" width="100" height="22"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="WJM-Dn-1lR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㅇㅇㅇ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZO-s2-o2i" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                                    <rect key="frame" x="210" y="87" width="59" height="22"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="asb-Vm-O3p"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㅇㅇㅇ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-JA-Jjd" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                                    <rect key="frame" x="279" y="87" width="59" height="22"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="RC7-Bl-LbM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="X5j-MI-B3W" firstAttribute="leading" secondItem="jHH-hb-3Di" secondAttribute="trailing" constant="10" id="1M5-YP-qoM"/>
+                                                <constraint firstItem="jHH-hb-3Di" firstAttribute="leading" secondItem="g6b-lu-Mh3" secondAttribute="leading" constant="10" id="7XQ-S1-VDQ"/>
+                                                <constraint firstItem="LjD-ZD-bJR" firstAttribute="top" secondItem="X5j-MI-B3W" secondAttribute="bottom" constant="8" id="81Z-q2-4Ky"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LjD-ZD-bJR" secondAttribute="trailing" constant="20" symbolic="YES" id="95W-xP-EBF"/>
+                                                <constraint firstItem="oZO-s2-o2i" firstAttribute="leading" secondItem="3Ni-tr-ghN" secondAttribute="trailing" constant="10" id="E2H-kX-Ogc"/>
+                                                <constraint firstItem="3Ni-tr-ghN" firstAttribute="baseline" secondItem="oZO-s2-o2i" secondAttribute="baseline" id="FqT-sO-J6l"/>
+                                                <constraint firstItem="3Ni-tr-ghN" firstAttribute="leading" secondItem="LjD-ZD-bJR" secondAttribute="leading" id="IcO-oR-Abj"/>
+                                                <constraint firstItem="LjD-ZD-bJR" firstAttribute="leading" secondItem="X5j-MI-B3W" secondAttribute="leading" id="QFI-2J-fgH"/>
+                                                <constraint firstItem="oZO-s2-o2i" firstAttribute="baseline" secondItem="JSJ-JA-Jjd" secondAttribute="baseline" id="TiN-2H-NIS"/>
+                                                <constraint firstItem="3Ni-tr-ghN" firstAttribute="top" secondItem="LjD-ZD-bJR" secondAttribute="bottom" constant="10" id="UVo-31-jxS"/>
+                                                <constraint firstItem="JSJ-JA-Jjd" firstAttribute="leading" secondItem="oZO-s2-o2i" secondAttribute="trailing" constant="10" id="WzA-7b-5a2"/>
+                                                <constraint firstItem="JSJ-JA-Jjd" firstAttribute="centerY" secondItem="oZO-s2-o2i" secondAttribute="centerY" id="bn4-CD-Yff"/>
+                                                <constraint firstItem="X5j-MI-B3W" firstAttribute="centerX" secondItem="LjD-ZD-bJR" secondAttribute="centerX" id="dxJ-uL-8Hd"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Ni-tr-ghN" secondAttribute="bottom" constant="11" id="i64-ly-IBl"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X5j-MI-B3W" secondAttribute="trailing" constant="20" symbolic="YES" id="ilI-P3-ula"/>
+                                                <constraint firstItem="oZO-s2-o2i" firstAttribute="centerY" secondItem="3Ni-tr-ghN" secondAttribute="centerY" id="rM5-ae-SQV"/>
+                                                <constraint firstItem="X5j-MI-B3W" firstAttribute="top" secondItem="jHH-hb-3Di" secondAttribute="top" id="wcl-js-GcJ"/>
+                                                <constraint firstItem="jHH-hb-3Di" firstAttribute="top" secondItem="g6b-lu-Mh3" secondAttribute="top" constant="14" id="yxh-L9-IaE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="LjD-ZD-bJR" id="ifQ-II-va7"/>
+                                            <outlet property="thumbnail" destination="jHH-hb-3Di" id="0z5-uP-maG"/>
+                                            <outlet property="titleLabel" destination="X5j-MI-B3W" id="WOp-cQ-KvN"/>
+                                            <outletCollection property="keyWordLabelList" destination="3Ni-tr-ghN" collectionClass="NSMutableArray" id="2g1-1g-z9y"/>
+                                            <outletCollection property="keyWordLabelList" destination="oZO-s2-o2i" collectionClass="NSMutableArray" id="ogs-0e-TXP"/>
+                                            <outletCollection property="keyWordLabelList" destination="JSJ-JA-Jjd" collectionClass="NSMutableArray" id="DJ4-2Y-sk5"/>
+                                            <segue destination="1fi-C0-BiR" kind="show" identifier="toDetailView" id="rJ2-3r-QHT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hzN-XX-BZa" id="ung-be-njt"/>
+                                    <outlet property="delegate" destination="hzN-XX-BZa" id="HBj-jP-rgV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GT6-5B-0kR" firstAttribute="trailing" secondItem="bxD-yo-RgD" secondAttribute="trailing" id="ZdU-ZW-NxO"/>
+                            <constraint firstItem="wFE-dk-mtg" firstAttribute="centerX" secondItem="GT6-5B-0kR" secondAttribute="centerX" id="eaX-b4-pl5"/>
+                            <constraint firstItem="bxD-yo-RgD" firstAttribute="leading" secondItem="GT6-5B-0kR" secondAttribute="leading" id="jAC-eU-BOP"/>
+                            <constraint firstItem="GT6-5B-0kR" firstAttribute="bottom" secondItem="bxD-yo-RgD" secondAttribute="bottom" id="mZD-Ar-roH"/>
+                            <constraint firstItem="wFE-dk-mtg" firstAttribute="centerY" secondItem="GT6-5B-0kR" secondAttribute="centerY" id="ppt-cj-OL4"/>
+                            <constraint firstItem="bxD-yo-RgD" firstAttribute="top" secondItem="GT6-5B-0kR" secondAttribute="top" id="ptX-nn-dHz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GT6-5B-0kR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="뉴스 리스트" id="Tiy-fh-Yfn"/>
+                    <connections>
+                        <outlet property="myTableView" destination="bxD-yo-RgD" id="tVo-6K-oqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgh-YT-aUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2267" y="138"/>
+        </scene>
+        <!--상세 보기-->
+        <scene sceneID="dD7-og-sAx">
+            <objects>
+                <viewController id="1fi-C0-BiR" customClass="detailViewController" customModule="rssNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucv-yj-mUL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title sdafadsfdsafjhdaksjfhkjadhfkjahfjkaadsjflajfadjkfa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-q4-bjZ">
+                                <rect key="frame" x="10" y="98" width="394" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㅇㅇㅇ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B58-aG-9PI" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="189" y="151" width="59" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="dga-ag-p3D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㅇㅇㅇ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myr-gH-DED" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="120" y="151" width="59" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="anN-6a-GFG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="ㄴㅇㄹㅇㄴㄹㅇㄴㅇㄴㅇㄴㄹㄴㅇㄹㄴ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-y1-yXE" customClass="DesignableLabel" customModule="rssNewsReader" customModuleProvider="target">
+                                <rect key="frame" x="10" y="151" width="100" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="1a7-Xh-vv1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightTextInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomTextInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXd-Np-eii">
+                                <rect key="frame" x="0.0" y="183" width="414" height="679"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="iJO-We-54f">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Myr-gH-DED" firstAttribute="leading" secondItem="rTM-y1-yXE" secondAttribute="trailing" constant="10" id="3FZ-1G-AbO"/>
+                            <constraint firstItem="Myr-gH-DED" firstAttribute="baseline" secondItem="B58-aG-9PI" secondAttribute="baseline" id="4B5-Jq-1Wa"/>
+                            <constraint firstItem="iJO-We-54f" firstAttribute="centerY" secondItem="ALU-UN-L0X" secondAttribute="centerY" id="4Qe-tK-xOo"/>
+                            <constraint firstItem="ALU-UN-L0X" firstAttribute="trailing" secondItem="KXd-Np-eii" secondAttribute="trailing" id="5Db-sq-i5R"/>
+                            <constraint firstItem="ALU-UN-L0X" firstAttribute="bottom" secondItem="KXd-Np-eii" secondAttribute="bottom" id="5xP-8N-CYp"/>
+                            <constraint firstItem="rTM-y1-yXE" firstAttribute="top" secondItem="ZFm-q4-bjZ" secondAttribute="bottom" constant="10" id="7Gj-Am-S4Z"/>
+                            <constraint firstItem="B58-aG-9PI" firstAttribute="leading" secondItem="Myr-gH-DED" secondAttribute="trailing" constant="10" id="DBK-Tc-XI9"/>
+                            <constraint firstItem="rTM-y1-yXE" firstAttribute="baseline" secondItem="Myr-gH-DED" secondAttribute="baseline" id="HPv-bt-l1F"/>
+                            <constraint firstItem="Myr-gH-DED" firstAttribute="centerY" secondItem="rTM-y1-yXE" secondAttribute="centerY" id="OvD-8s-LEN"/>
+                            <constraint firstItem="KXd-Np-eii" firstAttribute="leading" secondItem="ALU-UN-L0X" secondAttribute="leading" id="SqX-XI-jvm"/>
+                            <constraint firstItem="ALU-UN-L0X" firstAttribute="trailing" secondItem="ZFm-q4-bjZ" secondAttribute="trailing" constant="10" id="XDF-Xb-6oN"/>
+                            <constraint firstItem="iJO-We-54f" firstAttribute="centerX" secondItem="ALU-UN-L0X" secondAttribute="centerX" id="aeb-fx-uy4"/>
+                            <constraint firstItem="B58-aG-9PI" firstAttribute="centerY" secondItem="Myr-gH-DED" secondAttribute="centerY" id="bGe-e9-edU"/>
+                            <constraint firstItem="KXd-Np-eii" firstAttribute="top" secondItem="rTM-y1-yXE" secondAttribute="bottom" constant="10" id="hpz-95-l8v"/>
+                            <constraint firstItem="ZFm-q4-bjZ" firstAttribute="leading" secondItem="ALU-UN-L0X" secondAttribute="leading" constant="10" id="mMV-vH-F0p"/>
+                            <constraint firstItem="ZFm-q4-bjZ" firstAttribute="top" secondItem="ALU-UN-L0X" secondAttribute="top" constant="10" id="sX4-Ov-Zq8"/>
+                            <constraint firstItem="rTM-y1-yXE" firstAttribute="leading" secondItem="ZFm-q4-bjZ" secondAttribute="leading" id="vhP-vO-Q8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ALU-UN-L0X"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="상세 보기" id="kIV-u1-UQ2"/>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="iJO-We-54f" id="lAa-aA-y8e"/>
+                        <outlet property="myWebView" destination="KXd-Np-eii" id="XfQ-8w-7Wd"/>
+                        <outlet property="titleLabel" destination="ZFm-q4-bjZ" id="ptN-FE-0Jd"/>
+                        <outletCollection property="keyWordLabelList" destination="rTM-y1-yXE" collectionClass="NSMutableArray" id="u9T-35-A8l"/>
+                        <outletCollection property="keyWordLabelList" destination="Myr-gH-DED" collectionClass="NSMutableArray" id="iFY-7F-6Ca"/>
+                        <outletCollection property="keyWordLabelList" destination="B58-aG-9PI" collectionClass="NSMutableArray" id="c8o-w0-P46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZN-K3-9Oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3286" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1X1-LE-ln8">
+            <objects>
+                <navigationController id="UCy-ec-LTD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cbd-ov-gUV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hzN-XX-BZa" kind="relationship" relationship="rootViewController" id="GCk-QN-SZI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Yz-mS-uiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_internet" width="256" height="256"/>
+        <image name="img_news2" width="256" height="256"/>
+        <image name="img_rss" width="256" height="256"/>
+    </resources>
+</document>
