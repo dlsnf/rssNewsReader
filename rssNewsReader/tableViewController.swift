@@ -207,6 +207,14 @@ class tableViewController: UIViewController, XMLParserDelegate{
 
 
             }//for
+            
+            //로딩이 너무 걸릴땐 그냥 노출
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                self.myTableView.isUserInteractionEnabled = true;
+                self.myTableView.isHidden = false;
+                self.tableReloaddd();
+            }
+            
 
         }
 
